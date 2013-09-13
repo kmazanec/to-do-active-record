@@ -9,7 +9,9 @@ class TasksController
   end
 
   def self.complete!(task_id_to_complete)
+    
     Task.find(task_id_to_complete).completed = 1
+
   end
 
   def self.list
