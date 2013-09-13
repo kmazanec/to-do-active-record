@@ -7,6 +7,7 @@ class Task < ActiveRecord::Base
     self.all.each do |task|
       ary << "#{task.id}). #{task.description}"
     end
+    ary
   end
 end
 
