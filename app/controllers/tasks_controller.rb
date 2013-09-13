@@ -8,10 +8,15 @@ class TasksController
   end
 
   def self.complete!(task_id_to_complete)
-
+    
   end
 
   def self.list
-
+    arr = []
+    Task.all.each do |item|
+      arr << "#{item.id}: #{item.description}"
+    end
+    arr
   end
+
 end
