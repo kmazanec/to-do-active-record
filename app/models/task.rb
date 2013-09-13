@@ -9,6 +9,16 @@ class Task < ActiveRecord::Base
     end
     ary
   end
+  
+  def self.add
+  end
+
+  def self.delete(num)
+  end
+
+  def self.complete!(num)
+  end
+
 end
 
 
