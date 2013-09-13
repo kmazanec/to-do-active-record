@@ -24,6 +24,6 @@ else
   when "list" then puts TasksController.list
   when "add" then TasksController.add(ARGV[1..-1].join(' '))
   when "delete" then TasksController.delete(ARGV[1])
-  when "complete" then TasksController.complete(ARGV[1])
+  when "complete" then TasksController.complete!(ARGV[1])
   end
 end 
