@@ -5,15 +5,12 @@ class Task < ActiveRecord::Base
     # select id, description from tasks
     ary = []
     self.all.each do |task|
-      ary << "#{task.id}). #{task.description}"
+      ary << [task.id, task.description, task.completed]
     end
     ary
   end
   
-  def self.add
-  end
-
-  def self.delete(num)
+  def self.add(string)
   end
 
   def self.complete!(num)
