@@ -1,6 +1,5 @@
 # num.times do
-#   Task.create(desription: Faker::Lorem.sentence(word_count = 4),
-#               completed:  [0,1].sample)
+#   puts "#{Faker::Lorem.sentence(word_count = 4)}, #{[0,1].sample}"
 # end
 
 
@@ -11,7 +10,8 @@ class SeedTable
 
   def self.task(num)
     num.times do
-      puts "#{Faker::Lorem.sentence(word_count = 4)}, #{[0,1].sample}"
+      Task.create(desription: Faker::Lorem.sentence(word_count = 4),
+                  completed:  [0,1].sample)
     end
   end
 
