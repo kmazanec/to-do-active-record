@@ -17,7 +17,7 @@ class TasksController
   def self.list
     arr = []
     Task.all.each do |item|
-      arr << "#{item.id}: #{item.description}"
+      arr << "#{item.id}: [#{item.completed == 1 ? "X" : " "}] #{item.description}"
     end
     arr
   end
